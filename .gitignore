@@ -1,5 +1,7 @@
 HELP.md
 /target/
+/love-client/target/
+/love-service-impl/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
