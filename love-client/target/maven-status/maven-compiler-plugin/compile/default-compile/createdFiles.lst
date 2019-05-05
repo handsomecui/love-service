@@ -1,0 +1,8 @@
+com/hbc/client/love/response/Res.class
+com/hbc/client/love/response/Region.class
+com/hbc/client/love/config/LoveServiceConfig.class
+com/hbc/client/love/IRegionService.class
+com/hbc/client/love/config/FeignSpringFormDecode.class
+com/hbc/client/love/response/Res$CodeEnum.class
+com/hbc/client/love/IMessageService.class
+com/hbc/client/love/form/MessageParam.class

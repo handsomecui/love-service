@@ -1,0 +1,48 @@
+<configuration>
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+  <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+
+  <appender name="rootAppender"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>/home/admin/love/logs/root.log</File>
+
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+
+      <fileNamePattern>/home/admin/love/logs/root.log.%d.log</fileNamePattern>
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <!-- pattern节点，用来设置日志的输入格式 -->
+      <pattern>
+        %d %thread ${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-} %p (%file\)- %m%n
+      </pattern>
+      <!-- 记录日志的编码 -->
+      <charset>UTF-8</charset> <!-- 此处设置字符集 -->
+    </encoder>
+  </appender>
+
+  <!-- 控制台输出日志级别 -->
+  <root level="info">
+    <appender-ref ref="rootAppender"/>
+  </root>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+  <!-- encoder 默认配置为PatternLayoutEncoder -->
+  <encoder>
+  <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+  <charset>UTF-8</charset>
+  </encoder>
+  </appender>
+
+  <logger name="java.sql.Statement" level="DEBUG" >
+    <appender-ref ref="STDOUT" />
+  </logger>
+  <logger name="java.sql.PreparedStatement" level="DEBUG">
+    <appender-ref ref="STDOUT" />
+  </logger>
+  <logger name="com.yunpian.sms.application.user.mapper" level="DEBUG">
+    <appender-ref ref="STDOUT" />
+  </logger>
+
+</configuration>

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: love-service
+  datasource:
+    dynamic:
+      primary: love
+      ## 开启 mybatis-plus 支持 很关键 ！！
+      mpEnabled: true
+      datasource:
+        love:
+          username: @love.mysql.username@
+          password: '@love.mysql.password@'
+          driver-class-name: com.mysql.jdbc.Driver
+          url: @love.mysql.master.main.url@
+server:
+  tomcat:
+    accesslog:
+      directory: /home/admin/love/logs
+      enabled: true
+  port: 18902
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://@eureka.peer1.host@:@eureka.peer1.port@/eureka/,http://@eureka.peer2.host@:@eureka.peer2.port@/eureka/
+  instance:
+    preferIpAddress: false
+logging:
+  config: classpath:logback-boot.xml
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/love/*Mapper.xml
+  type-aliases-package: com.hbc.impl.model

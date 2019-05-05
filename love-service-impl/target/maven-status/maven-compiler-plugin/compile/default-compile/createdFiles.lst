@@ -1,0 +1,12 @@
+com/hbc/impl/config/MybatisPlusConfig.class
+com/hbc/impl/model/LoveMessage.class
+com/hbc/impl/model/LoveMessageExample$Criteria.class
+com/hbc/impl/config/FeignSpringFormEncoder$MultipartFileResource.class
+com/hbc/impl/model/LoveMessageExample$Criterion.class
+com/hbc/impl/config/FeignSpringFormEncoder$HttpOutputMessageImpl.class
+com/hbc/impl/model/LoveMessageExample.class
+com/hbc/impl/mapper/LoveMessageMapper.class
+com/hbc/impl/config/FeignSpringFormEncoder.class
+com/hbc/impl/LoveServiceImplApplication.class
+com/hbc/impl/controller/MessageServiceImpl.class
+com/hbc/impl/model/LoveMessageExample$GeneratedCriteria.class
