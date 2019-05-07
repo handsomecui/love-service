@@ -17,7 +17,7 @@ server:
     accesslog:
       directory: /home/admin/love/logs
       enabled: true
-  port: 18902
+#  port: 18902
 
 eureka:
   client:

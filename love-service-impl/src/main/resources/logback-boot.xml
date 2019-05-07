@@ -5,11 +5,11 @@
 
   <appender name="rootAppender"
     class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <File>/home/admin/love/logs/root.log</File>
+    <File>/home/admin/love-service/logs/root.log</File>
 
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 
-      <fileNamePattern>/home/admin/love/logs/root.log.%d.log</fileNamePattern>
+      <fileNamePattern>/home/admin/love-service/logs/root.log.%d.log</fileNamePattern>
       <maxHistory>30</maxHistory>
     </rollingPolicy>
     <encoder>
