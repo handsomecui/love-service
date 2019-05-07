@@ -39,6 +39,7 @@ public class FeignSpringFormDecode implements Decoder{
     while ((line = bufferedReader.readLine()) != null) {
       result += line;
     }
+    System.out.println("result = " + result);
     Object o = JSONObject.parseObject(result, type);
     return o;
 
