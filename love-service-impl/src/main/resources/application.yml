@@ -15,7 +15,7 @@ spring:
 server:
   tomcat:
     accesslog:
-      directory: /home/admin/love/logs
+      directory: /home/admin/love-service/logs
       enabled: true
 #  port: 18902
 
