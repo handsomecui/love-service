@@ -28,7 +28,7 @@ public class MessageServiceImpl implements IMessageService {
       loveMessage.setIp(messageParam.getIp());
       loveMessage.setCreateTime(System.currentTimeMillis());
       loveMessageMapper.insert(loveMessage);
-      return Res.buildSucc();
+      return getAll();
     }catch (Throwable e){
       logger.error(e.getMessage(), e);
       return Res.buildError(e);
