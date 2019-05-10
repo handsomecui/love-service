@@ -24,7 +24,7 @@ eureka:
     serviceUrl:
       defaultZone: http://@eureka.peer1.host@:@eureka.peer1.port@/eureka/,http://@eureka.peer2.host@:@eureka.peer2.port@/eureka/
   instance:
-    preferIpAddress: false
+    preferIpAddress: true
 logging:
   config: classpath:logback-boot.xml
 
