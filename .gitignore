@@ -1,7 +1,18 @@
 HELP.md
-/target/
-/love-client/target/
-/love-service-impl/target/
+*.settings
+*.classpath
+*.project
+*.bak
+*.class
+target
+.sass-cache
+*.log
+bin/**
+.idea/**
+*.iml
+submode
+**/.externalToolBuilders
+love-service.jar
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###

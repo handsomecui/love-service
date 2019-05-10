@@ -1,6 +1,6 @@
 package com.hbc.client.love.config;
 
-import com.alibaba.fastjson.JSONObject;
+import com.google.gson.Gson;
 import feign.FeignException;
 import feign.Response;
 import feign.codec.DecodeException;
@@ -39,8 +39,9 @@ public class FeignSpringFormDecode implements Decoder{
     while ((line = bufferedReader.readLine()) != null) {
       result += line;
     }
+    Gson gson = new Gson();
     System.out.println("result = " + result);
-    Object o = JSONObject.parseObject(result, type);
+    Object o = gson.fromJson(result, type);
     return o;
 
   }
